@@ -1,5 +1,7 @@
 package com.dashrun.payload;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,10 +11,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserResponse {
+public class LoginUserRequest {
+    @NotBlank
+    @Size(max = 100)
     private String username;
-    private String name;
-    private String role;
-    private String status;
-}
 
+    @NotBlank
+    @Size(max = 100)
+    private String password;
+}

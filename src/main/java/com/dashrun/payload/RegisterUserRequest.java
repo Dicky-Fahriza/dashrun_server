@@ -18,14 +18,18 @@ public class RegisterUserRequest {
 
     @NotBlank
     @Size(max = 100)
+    private String password;
+
+    @NotBlank
+    @Size(max = 100)
     private String role;
 
     @NotBlank
     @Size(max = 100)
-    private String password;
-    
+    private String name;
+   
     @NotBlank
     @Size(max = 100)
-    private String name;
-
+    private String status;
+    
 }
